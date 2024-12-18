@@ -1,0 +1,24 @@
+import time
+
+def pretend_network_change():
+    address = input("Enter Ethereum address: ")
+    network = input("Enter the network (e.g., https://mainnet.eth.net): ")
+    
+    if not address.startswith("0x") or len(address) != 42:
+        print("Error! Ethereum address is in invalid format. ")
+        return
+    
+    if not network.startswith("https") or not network.endswith("eth.net"):
+        print("Error! The network name is invalid. It must start with 'https' and end with 'eth.net'")
+        return
+    
+    print(f"Address: {address}")
+    print(f"Network: {network}")
+    print("Network replacement process has begun.... ⏳")
+    
+    time.sleep(60)
+    
+    print(f"✅ {network} network {address} for successfully replaced!  🚀")
+    
+
+pretend_network_change()
